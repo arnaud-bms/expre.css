@@ -1,0 +1,419 @@
+/**
+* RESET
+**/
+    html, body {
+        margin: 0; padding: 0;
+    }
+    html {
+        font: 62.5%/1.4em Arial, Helvetica, helve, sans-serif;
+    }
+    body {
+        position: relative; z-index: 0;
+        font-size: 1em; line-height: 1.4em; color: #333;
+    }
+
+    /**
+    * CONTENT FONT SIZING
+    **/
+        p, ul, ol, dl, blockquote, pre, td, th, label, textarea, .control-group {
+            font-size: 1em; /* equiv 10px */
+            line-height: 1.4em;
+            margin: 1.4em 0;
+        }
+        h1, .h1-like {
+            font-size:  2.2em; /* equiv 22px */
+            line-height: 1.2728em;
+            margin:  1.2728em 0 .6364em 0;
+        }
+        h2, .h2-like {
+            font-size:  2em; /* equiv 20px */
+            line-height: 1.4em;
+            margin:  1.4em 0 .7em 0;
+        }
+        h3, .h3-like {
+            font-size:  1.8em; /* equiv 18px */
+            line-height: 1.5556em;
+            margin:  1.5556em 0 .7778em 0;
+        }
+        h4, .h4-like {
+            font-size:  1.6em; /* equiv 16px */
+            line-height: 1.75em;
+            margin:  1.75em 0 .875em 0;
+        }
+        h5, .h5-like {
+            font-size:  1.4em; /* equiv 14px */
+            line-height:  1em;
+            margin:  2em 0  1em 0;
+        }
+        h6, .h6-like {
+            font-size:  1.2em; /* equiv 12px */
+            line-height:  1.1667em;
+            margin:  2.3334em 0 1.1667em 0;
+        }
+        .smaller {
+            font-size: .6em; /* equiv 6px */
+            line-height:  2.3333em;
+            margin:  2.3333em 0  2.3333em 0;
+        }
+        .small {
+            font-size: .8em; /* equiv 8px */
+            line-height:  1.75em;
+            margin:  1.75em 0  1.75em 0;
+        }
+        .big {
+            font-size:  1.2em; /* equiv 12px */
+            line-height:  1.1667em;
+            margin:  1.1667em 0  1.1667em 0;
+        }
+        .bigger{
+            font-size:  1.4em; /* equiv 14px */
+            line-height:  1.3em;
+            margin:  1em 0  1em 0;
+        }
+        .biggest {
+            font-size:  1.6em; /* equiv 16px */
+            line-height: 1.75em;
+            margin: .875em 0 .875em 0;
+        }
+        /* avoid supp margin on nested elements */
+        li p, li ul {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        /* shortcuts for text alignment */
+        .txtcenter { text-align: center; }
+        .txtjustify { text-align: justify; }
+        .txtleft { text-align: left; }
+        .txtright { text-align: right; }
+        /* you shall not pass */
+        textarea, table, td, th, code, pre, samp, div, p {
+            word-wrap: break-word;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            -ms-hyphens: auto;
+            -o-hyphens: auto;
+            hyphens: auto;
+        }
+        code, pre, samp {
+            white-space: pre-wrap; background: #efefef;
+            font-family: consolas, 'DejaVu Sans Mono', courier, monospace;
+        }
+        code {
+            line-height: 1em;
+        }
+        table {
+            margin-bottom: 1.4em;
+        }
+
+        hr {
+            border: 0; border-top: 1px solid #333;
+        }
+            hr.double {
+                border-top: 3px double #333 !important;
+            }
+            hr.dashed {
+                border-top: 1px dashed #333 !important;
+            }
+            hr.dotted {
+                border-top: 1px dotted #333 !important;
+            }
+
+    /**
+    * CONTENT GENERAL STYLES
+    **/
+        /** LINKS **/
+            a, a:visited, a:link {
+                color: #bad104; text-decoration: none; outline: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+
+
+        /** SELECTIONS **/
+            ::-webkit-selection {
+                background : #bad104;
+                color : #ffffff;
+                text-shadow : none;
+            }
+            ::-moz-selection {
+                background : #bad104;
+                color : #ffffff;
+                text-shadow : none;
+            }
+            ::selection {
+                background : #bad104;
+                color : #ffffff;
+                text-shadow : none;
+            }
+
+
+        /** UI ELEMENTS **/
+            input, textarea, select, button { margin: 0; padding: 0; }
+            input[type=submit], input[type=button], input[type=reset], button { cursor: pointer; }
+            textarea { resize: none; border: 1px solid #bbb; font: inherit; padding: .5em; min-height: 6em;}
+            input[type=checkbox], input[type=radio] {
+                vertical-align: middle;
+            }
+
+            input[type=text], input[type=password], input[type=search] {
+                display: inline-block; padding: .3em;
+                border: 1px solid #bbb;
+                font-size: 1em; line-height: 1.4em;
+            }
+            select {
+                padding: .2em;
+                font-size: 1em; line-height: 1.4em;
+                border: 1px solid #bbb;
+            }
+
+            ::-webkit-input-placeholder {
+                color: #ccc;
+            }
+            :-moz-placeholder {
+                color: #ccc;
+            }
+            ::-moz-placeholder {
+                color: #ccc;
+            }
+            :-ms-input-placeholder {
+                color: #ccc;
+            }
+
+            .input-tiny { width: 50px; }
+            .input-small { width: 100px; }
+            .input-medium { width: 150px; }
+            .input-large { width: 200px; }
+            .input-xlarge { width: 250px; }
+            .input-xxlarge { width: 300px; }
+            .input-full { width: 100%; }
+            .input-block { display: block; width: 100%; }
+            input[type="search"]::-webkit-search-decoration { display: none; }
+
+
+        /** IMAGES **/
+            img { max-width: 100%;  }
+            figure, div.figure {
+                display: block; margin: 0; padding: 0;
+            }
+
+
+/**
+* LAYOUT & MODULES
+**/
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    /**
+    * FLOAT LAYOUT
+    **/
+        .mod, .item {
+            overflow: hidden;
+        }
+        .clearfix, .line, .row {
+            clear: both;
+        }
+        .clearfix:after, .line:after, .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+    /**
+    * TABLE LAYOUT
+    **/
+        .row {
+            display: table;
+            table-layout: fixed;
+            width: 100%; margin-top: 2%;
+        }
+
+        .row > *, .col {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+    /**
+    * GRID LAYOUT
+    **/
+        [class*=grid] > * { float: left; }
+        [class*=grid] > * + * { margin-left: 2%; }
+
+        .grid2 > * { width: 49%; }
+        .grid3 > * { width: 32%; }
+        .grid4 > * { width: 23.5%; }
+        .grid5 > * { width: 18.4%; }
+        .grid6 > * { width: 15%; }
+
+        .grid2-1 > *:first-child, .grid1-2 > * + * { width: 66%; }
+        .grid1-2 > *:first-child, .grid2-1 > * + * { width: 32%; }
+        .grid1-3 > *:first-child, .grid3-1 > * + * { width: 23.5%; }
+        .grid3-1 > *:first-child, .grid1-3 > * + * { width: 74.5%; }
+        
+        .grid-test { margin-top: 1em; }
+            .grid-test > * { height: 30px; background: #eee; }
+
+    /**
+    * ALIGNMENTS & FLOATS
+    **/
+        /** Containers **/
+            .container {
+                position: relative; display: block; margin-left: auto; margin-right: auto;
+                width: 960px;
+            }
+
+
+        /** Left/Right/Center elements **/
+            .left { float: left; }
+            .right { float: right; }
+
+            img.left { margin-right: 1em; }
+            img.right { margin-left: 1em; }
+            img.left, img.right {
+                margin-bottom: .5em;
+            }
+
+            .center { margin-left: auto; margin-right: auto; }
+
+        /** Blocks widths **/
+            .w10    { width: 10%; }
+            .w20    { width: 20%; }
+            .w25    { width: 25%; }
+            .w30    { width: 30%; }
+            .w33    { width: 33.333%; }
+            .w40    { width: 40%; }
+            .w49    { width: 49%; }
+            .w50    { width: 50%; }
+            .w60    { width: 60%; }
+            .w66    { width: 66.666%; }
+            .w70    { width: 70%; }
+            .w75    { width: 75%; }
+            .w80    { width: 80%; }
+            .w90    { width: 90%; }
+            .w95    { width: 95%; }
+            .w98    { width: 98%; }
+            .w100   { width: 100%; }
+
+            .w50p   { width: 50px; }
+            .w100p  { width: 100px; }
+            .w150p  { width: 150px; }
+            .w200p  { width: 200px; }
+            .w300p  { width: 300px; }
+            .w400p  { width: 400px; }
+            .w500p  { width: 500px; }
+            .w600p  { width: 600px; }
+            .w700p  { width: 700px; }
+            .w800p  { width: 800px; }
+            .w960p  { width: 960px; }
+            .mw960p { max-width: 960px; }
+
+
+        /** Glue elements **/
+            .pfixbot, .pfixtop { position: fixed; }
+            .pfixbot { bottom: 0; left: 0; }
+            .pfixtop { top: 0; left: 0; }
+
+
+        /** Margins / Paddings **/
+            .m0 { margin: 0; }
+            .ml0 { margin-left: 0 !important; }
+            .mt0 { margin-top: 0 !important; }
+            .mt10 { margin-top: 10px !important; }
+            .mr0 { margin-right: 0 !important; }
+            .mb0 { margin-bottom: 0 !important; }
+
+            .p0 { padding: 0; }
+            .pl0 { padding-left: 0 !important; }
+            .pt0 { padding-top: 0 !important; }
+            .pr0 { padding-right: 0 !important; }
+            .pb0 { padding-bottom: 0 !important; }
+
+
+/**
+* RESPONSIVE CLASSES
+**/
+
+    /**
+    * EXTRA SMALL DEVICES
+    **/
+        @media (max-width: 767px) {
+            .vxs { display: block; }
+            .vsm, .vmd, .vlg { display: none; }
+            .hxs { display: none; }
+            .hsm, .hmd, .hlg { display: block; }
+
+            .container {
+                width: 100% !important;
+            }
+
+            .row {
+                margin-top: 0;
+            }
+
+            .grid1-3 > *, .mod, .item, .col, fieldset {
+                display: block !important;
+                float: none !important;
+                clear: none !important;
+                width: auto !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                border: 0;
+            }
+        }
+
+    /**
+    * SMALL DEVICES
+    **/
+        @media (min-width: 768px) and (max-width: 991px) {
+            .vsm { display: block; }
+            .vxs, .vmd, .vlg { display: none; }
+            .hsm { display: none; }
+            .hxs, .hmd, .hlg { display: block; }
+
+            .container {
+                width: 100% !important;
+            }
+
+            .row {
+                margin-top: 2%;
+            }
+
+            .grid1-3 > *, .mod, .item, .col, fieldset {
+                display: block !important;
+                float: none !important;
+                clear: none !important;
+                width: auto !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                border: 0;
+            }
+        }
+
+    /**
+    * MEDIUM DEVICES
+    **/
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .vmd { display: block; }
+            .vxs, .vsm, .vlg { display: none; }
+            .hmd { display: none; }
+            .hxs, .hsm, .hlg { display: block; }
+
+        }
+
+    /**
+    * LARGE DEVICES
+    **/
+        @media (min-width: 1200px) {
+            .vlg { display: block; }
+            .vxs, .vsm, .vmd { display: none; }
+            .hlg { display: none; }
+            .hxs, .hsm, .hmd { display: block; }
+
+            .container {
+                width: 1200px;
+            }
+
+        }
